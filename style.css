@@ -1,0 +1,118 @@
+/* Twinswipe site: the app's warm paper background with its coral and teal
+   token colors. Light and dark follow the device setting, as in the app. */
+:root {
+  --bg: #f9f2e4;
+  --surface: #efe5d0;
+  --text: #2b2416;
+  --muted: #6b5d43;
+  --coral: #d0412f;
+  --teal: #137067;
+  --rule: #d4cbba;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1b170e;
+    --surface: #2b2416;
+    --text: #f2ead9;
+    --muted: #b8a985;
+    --coral: #ff6b5b;
+    --teal: #2ec4b6;
+    --rule: #4a3e25;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+main {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+header img {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.9rem;
+  line-height: 1.2;
+}
+
+h1 .twin {
+  color: var(--coral);
+}
+
+h1 .swipe {
+  color: var(--teal);
+}
+
+h2 {
+  margin: 2.2rem 0 0.6rem;
+  font-size: 1.25rem;
+  color: var(--teal);
+}
+
+a {
+  color: var(--teal);
+  overflow-wrap: anywhere;
+}
+
+ul {
+  padding-left: 1.3rem;
+}
+
+li + li {
+  margin-top: 0.35rem;
+}
+
+.lang {
+  margin: 0 0 1.5rem;
+  color: var(--muted);
+}
+
+.date {
+  color: var(--muted);
+}
+
+.summary {
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 0.2rem 1.2rem;
+}
+
+.contact {
+  white-space: pre-line;
+}
+
+footer {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
